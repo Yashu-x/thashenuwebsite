@@ -80,7 +80,7 @@ export default function Portfolio() {
   const skills = [
     {
       category: "Languages",
-      items: ["JavaScript", "Python", "TypeScript"],
+      items: ["JavaScript"],
       icon: Code2,
       color: "from-blue-400 to-cyan-400",
     },
@@ -232,35 +232,33 @@ export default function Portfolio() {
         ))}
       </div>
 
-      {/* Navigation */}
+      {/* Navbar */}
       <motion.nav
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="fixed top-0 w-full z-50 bg-black/10 backdrop-blur-xl border-b border-white/10"
       >
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            <motion.div whileHover={{ scale: 1.1, rotate: 5 }} className="relative">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-purple-500/25">
-                TK
-              </div>
-            </motion.div>
-            <div className="hidden md:flex space-x-8">
-              {["About", "Skills", "Experience", "Projects", "Contact"].map((item, index) => (
-                <motion.a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 + 0.5 }}
-                  whileHover={{ scale: 1.1, color: "#06b6d4" }}
-                  className="text-white/80 hover:text-cyan-400 transition-all duration-300 font-medium"
-                >
-                  {item}
-                </motion.a>
-              ))}
+        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+          <motion.div whileHover={{ scale: 1.1, rotate: 5 }} className="relative">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center font-bold text-white text-xl shadow-lg">
+              TK
             </div>
+          </motion.div>
+          <div className="hidden md:flex space-x-8">
+            {["About", "Skills", "Experience", "Projects", "Contact"].map((item, index) => (
+              <motion.a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 + 0.5 }}
+                whileHover={{ scale: 1.1, color: "#06b6d4" }}
+                className="text-white/80 hover:text-cyan-400 transition-all duration-300 font-medium"
+              >
+                {item}
+              </motion.a>
+            ))}
           </div>
         </div>
       </motion.nav>
@@ -335,41 +333,22 @@ export default function Portfolio() {
               transition={{ duration: 0.8, delay: 1 }}
               className="flex flex-wrap justify-center gap-4"
             >
-              <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-300">
-                <Mail className="w-5 h-5 mr-2" />
-                Let's Connect
-              </Button>
-              <Button
-                variant="outline"
-                className="border-2 border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-full text-lg font-semibold backdrop-blur-sm bg-transparent"
-              >
-                <Download className="w-5 h-5 mr-2" />
-                Download CV
-              </Button>
+             <a href="mailto:n.thashenu@gmail.com">
+                <Button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg">
+                  <Mail className="w-5 h-5 mr-2" />
+                  Let's Connect
+                </Button>
+              </a>
+              <a href="cv.pdf" download>
+                <Button variant="outline" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg">
+                  <Download className="w-5 h-5 mr-2" />
+                  Download CV
+                </Button>
+              </a>
             </motion.div>
           </motion.div>
 
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20"
-          >
-            {[
-              { label: "Projects", value: 5 },
-              { label: "Technologies", value: 25 },
-              { label: "Years Experience", value: 3 },
-              { label: "Certifications", value: 3 },
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                  <AnimatedCounter value={stat.value} />+
-                </div>
-                <div className="text-gray-400 mt-2">{stat.label}</div>
-              </div>
-            ))}
-          </motion.div>
+          
         </div>
       </section>
 
