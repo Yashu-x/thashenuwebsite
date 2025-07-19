@@ -17,7 +17,7 @@ const Navbar = () => {
           </div>
         </motion.div>
         <div className="hidden md:flex space-x-8">
-          {["About", "Skills", "Experience", "Projects", "Contact"].map((item, index) => (
+          {["About", "Technology", "Experience", "Projects", "Contact"].map((item, index) => (
             <motion.a
               key={item}
               href={`#${item.toLowerCase()}`}

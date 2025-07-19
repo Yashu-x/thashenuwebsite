@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Github, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -19,6 +19,7 @@ const Footer = () => {
             {[
               { icon: Github, href: "https://github.com/Yashu-x" },
               { icon: Mail, href: "mailto:n.thashenu@gmail.com" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/thashenu-kularathna" },
             ].map((social, index) => (
               <motion.a
                 key={index}

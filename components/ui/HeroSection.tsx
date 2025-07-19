@@ -5,7 +5,8 @@ import { useRef, useEffect, useState } from "react";
 import { Mail, Zap, Download } from "lucide-react";
 import FloatingElement from "./FloatingElement";
 import { Button } from "@/components/ui/button";
-
+import Image from "next/image";
+import logo from '@/public/logo.png';
 const HeroSection = () => {
   const containerRef = useRef(null);
   // const [_IsMounted, setIsMounted] = useState(false);
@@ -51,12 +52,10 @@ const HeroSection = () => {
           className="mb-4"
         >
           <FloatingElement>
-            <div className="relative mx-auto w-40 h-40 mb-4">
+            <div className="relative mx-auto w-50 h-50 mb-4">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-cyan-500 to-pink-500 rounded-full animate-spin-slow" />
-              <div className="absolute inset-2 bg-slate-900 rounded-full flex items-center justify-center">
-                <span className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                  TK
-                </span>
+              <div className="absolute inset-2 bg-slate-900 rounded-full flex items-center justify-center ">
+                <Image src={logo} width={150} height={115} alt="mama yashuu" className="rounded-full justify-center "/>
               </div>
             </div>
           </FloatingElement>

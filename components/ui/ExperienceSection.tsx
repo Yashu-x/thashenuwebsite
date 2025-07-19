@@ -1,12 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
-import { Briefcase, GraduationCap, Calendar } from "lucide-react";
+import { Briefcase, GraduationCap, Calendar, Backpack } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="py-32 relative">
+    <section id="experience" className="relative">
       <div className="container mx-auto px-6 relative">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -22,7 +22,7 @@ const ExperienceSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <Card className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border-slate-700/50 backdrop-blur-sm">
             <CardContent className="p-8">
               <div className="flex items-center mb-6">
@@ -67,6 +67,32 @@ const ExperienceSection = () => {
                 <p className="text-gray-400">University of Sri Jayewardenepura</p>
                 <p className="text-gray-400 text-sm">
                   <Calendar className="w-4 h-4 inline-block mr-2" /> Aug 2022 – April 2025
+                </p>
+                <p className="text-gray-300 mt-2">
+                  Comprehensive study of information and communication technologies with focus on practical
+                  applications.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+          <Card className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border-slate-700/50 backdrop-blur-sm">
+            <CardContent className="p-8">
+              <div className="flex items-center mb-6">
+                <div className="p-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-black-500 mr-4">
+                  <Backpack className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-1">StartUP</h3>
+                  <p className="text-gray-400">Co-Founder</p>
+                </div>
+              </div>
+              <div className="border-l-2 border-cyan-500/30 pl-6">
+                <h4 className="text-xl font-semibold text-white mb-1">RootFo</h4>
+                <Badge className="bg-cyan-500/20 text-cyan-300 border-cyan-500/30">2025</Badge>
+                <p className="text-cyan-400 font-medium"></p>
+                <p className="text-gray-400"></p>
+                <p className="text-gray-400 text-sm">
+                  <Calendar className="w-4 h-4 inline-block mr-2" /> April 2025
                 </p>
                 <p className="text-gray-300 mt-2">
                   Comprehensive study of information and communication technologies with focus on practical

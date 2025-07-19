@@ -68,7 +68,7 @@ const techItems = [
 
 const TechStackSection = () => {
   return (
-    <section className="py-32 relative overflow-hidden">
+    <section className="py-32 relative overflow-hidden" id="technology">
       <div className="container mx-auto px-6 relative">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -96,14 +96,18 @@ const TechStackSection = () => {
         >
           {techItems.map((tech, index) => {
             const Icon = tech.icon;
+            const coloerr =""
+            if(index){
+
+            }
             return (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.1 }}
-                className={`p-6 rounded-xl bg-slate-800/30 border border-slate-700/50 ${tech.color} backdrop-blur-sm text-center`}
+                className={`p-6 rounded-xl bg-gradient-to-r from-black to-cyan-300 border border-slate-700/50 ${tech.color} backdrop-blur-sm text-center`}
               >
                 <div className="flex justify-center mb-2">
-                  <CIcon icon={Icon} className="w-6 h-6 text-white"/>
+                  <CIcon icon={Icon} className="w-6 h-6 text-[#0000] "/>
                   {/* <Icon className="w-6 h-6 text-white" /> */}
                 </div>
                 <div className="text-white text-sm font-medium">{tech.name}</div>
