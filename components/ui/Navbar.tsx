@@ -1,5 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
+import logo from '@/app/favicon.ico';
+import Image from 'next/image';
 
 
 const Navbar = () => {
@@ -12,9 +14,15 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <motion.div whileHover={{ scale: 1.1, rotate: 5 }} className="relative">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center font-bold text-white text-xl shadow-lg">
-            TK
-          </div>
+          <div >
+            <Image
+              src={logo}
+              alt="Logo"
+              width={40}
+              height={50}
+              className="rounded"
+            />
+        </div>
         </motion.div>
         <div className="hidden md:flex space-x-8">
           {["About", "Technology", "Experience", "Projects", "Contact"].map((item, index) => (

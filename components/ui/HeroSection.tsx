@@ -19,29 +19,16 @@ const HeroSection = () => {
 
 
 
-  // // ✅ Always call useScroll, don't conditionally wrap it
-  // const scroll = useScroll({
-  //   target: containerRef,
-  //   offset: ["start start", "end start"],
-  // });
-
-  // // ✅ Only use scrollYProgress if mounted, fallback otherwise
-  // const scrollYProgress = isMounted ? scroll.scrollYProgress : motionValueZero;
-
-  // const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  // const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
-
   return (
     <section
       id="about"
       ref={containerRef} // ✅ ensure ref is attached here
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-25"
     >
-      {/* Blurred background motion effect */}
-      {/* <motion.div style={{ y: backgroundY }} className="absolute inset-0"> */}
+
         <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/30 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" />
-      {/* </motion.div> */}
+   
 
       <div className="container mx-auto px-6 text-center relative z-10">
         {/* Floating TK Icon */}
@@ -61,13 +48,7 @@ const HeroSection = () => {
           </FloatingElement>
         </motion.div>
 
-        {/* Hero text */}
-        {/* <motion.div
-          style={{ y: textY }}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        > */}
+
           <h1 className="text-6xl md:text-8xl mb-5 font-bold leading-tight">
             <span className="bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
               Thashenu
@@ -85,28 +66,12 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="mb-8 flex flex-wrap justify-center gap-4"
           >
-             {/* <a href="mailto:n.thashenu@gmail.com">
-              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 backdrop-blur-sm">
-                <Mail className="w-5 h-5 text-yellow-400 mr-2" />
-                <span className="text-xl font-semibold text-white">
-                  Let's Connect
-                </span>
-              </div>
-            </a> */}
+       
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 backdrop-blur-sm">
               <Zap className="w-5 h-5 text-yellow-400 mr-2" />
               <span className="text-xl font-semibold text-white">DevOps Engineer</span>
             </div>
-            {/* <a href="cv.pdf" download>
-              <div
-                className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 backdrop-blur-sm"
-              >
-                <Download className="w-5 h-5 text-yellow-400 mr-2" />
-                <span className="text-xl font-semibold text-white">
-                  Download CV
-                </span>
-              </div>
-            </a> */}
+     
           </motion.div>
 
           {/* Description */}
