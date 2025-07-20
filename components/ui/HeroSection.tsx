@@ -46,14 +46,14 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         {/* Floating TK Icon */}
         <motion.div
-          initial={{ scale: 0, rotate: -180 }}
+          initial={{ scale: 0, rotate: 0 }}
           animate={{ scale: 1, rotate: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="mb-4"
         >
           <FloatingElement>
             <div className="relative mx-auto w-50 h-50 mb-4">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-cyan-500 to-pink-500 rounded-full animate-spin-slow" />
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-cyan-500 to-pink-500 rounded-full" />
               <div className="absolute inset-2 bg-slate-900 rounded-full flex items-center justify-center ">
                 <Image src={logo} width={150} height={115} alt="mama yashuu" className="rounded-full justify-center "/>
               </div>
